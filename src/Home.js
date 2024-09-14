@@ -1,22 +1,20 @@
-import './Styles.css'; // Importing CSS file
+import './Styles.css'; // Importing the new CSS file
+import profileImage from './assets/Untitled desi.png'; // Correct relative path
 
 const Home = () => {
   return (
     <div className="home-container">
       <div className="text-section">
         <h1>Welcome to My Portfolio</h1>
-        <p>
-          I am Jane Doe, a passionate Full Stack Web Developer. With a strong
-          background in both front-end and back-end technologies, I specialize in
-          creating intuitive and dynamic user experiences while maintaining robust and efficient server-side logic.
+        <p className="intro-text">
+          <span className="hello-text">Hello,</span> It's me <span className="name-text">Nethmi Vaas</span>
         </p>
-        <p>
-          I have a deep love for coding, problem-solving, and continuous learning.
-          I’ve worked on various projects, from developing responsive websites to building powerful web applications using modern frameworks such as React, Node.js, and Laravel.
-        </p>
+        <a href="/path-to-your-cv.pdf" download="Nethmi_Vaas_CV.pdf">
+          <button className="download-button">Download CV</button>
+        </a>
       </div>
       <div className="image-section">
-        <img src="https://via.placeholder.com/300" alt="My Profile" />
+        <img src={profileImage} alt="My Profile" />
       </div>
     </div>
   );
