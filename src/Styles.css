@@ -1,4 +1,64 @@
-/* Global Styles */
+/* Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #003366; /* Navy blue */
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo or Title */
+.header h1 {
+    font-size: 2em;
+    margin: 0;
+    color: #ffffff; /* White */
+}
+
+/* Navigation Styling */
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    font-size: 1.1em;
+}
+
+/* Links Styling */
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover Effect */
+.nav-links a:hover {
+    background-color: #002244; /* Slightly darker navy blue */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header h1 {
+        margin-bottom: 20px;
+    }
+}
+
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -7,148 +67,87 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f2f5;
+    background-color: #f0f0f0;
     color: #333;
     margin: 0;
     padding: 0;
 }
 
-h1, h2, h3 {
-    margin: 0;
-    color: #333;
-}
-
-p {
-    line-height: 1.6;
-}
-
-a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Header Styles */
-.header {
-    background-color: #333;
-    padding: 20px;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.header h1 {
-    margin: 0;
-    font-size: 24px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-nav {
-    flex: 1;
-    text-align: right;
-}
-
-.nav-links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.nav-links li {
-    margin: 0 15px;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 500;
-    transition: color 0.3s ease-in-out;
-}
-
-.nav-links a:hover {
-    color: #0056b3;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .nav-links {
-        flex-direction: column;
-        background-color: #444;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 100%;
-        display: none;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-        text-align: center;
-    }
-
-    .nav-links.show {
-        display: flex;
-    }
-
-    .menu-icon {
-        display: block;
-    }
-}
-
-/* Menu Icon */
-.menu-icon {
-    display: none;
-    cursor: pointer;
-    font-size: 24px;
-    color: white;
-}
+/* Home Container */
+/* Container for the entire home section */
 .home-container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row; /* Set the direction to row */
+    justify-content: space-between; /* Space between text and image sections */
     align-items: center;
-    padding: 40px;
+    height: 100vh;
     background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 1200px;
-    margin: 50px auto;
+    padding: 20px 50px; /* Adjusted padding to center content */
 }
 
+/* Text Section */
 .text-section {
-    flex: 1;
-    padding-right: 20px;
-    max-width: 600px;
+    width: 50%; /* Take half of the container's width */
+    text-align: left; /* Align text to the left */
+    color: #003366; /* Navy blue */
+    padding-right: 20px; /* Add right padding to create some space */
 }
 
+/* Heading with a new font and size */
+.text-section h1 {
+    font-size: 3em; /* Larger font size */
+    margin-bottom: 20px;
+    color: #003366; /* Navy blue */
+    font-family: 'Georgia', serif; /* Change to a more elegant font */
+}
+
+/* Paragraph styling */
+.text-section p {
+    font-size: 1.5em; /* Larger font size */
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Styled intro text */
+.intro-text {
+    font-size: 1.8em; /* Larger font size */
+    font-weight: 500; /* Adjust font weight */
+    color: #333; /* Set text color */
+    line-height: 1.5; /* Adjust line height for spacing */
+}
+
+/* Styling for "Hello" */
+.hello-text {
+    font-size: 2.5em; /* Make "Hello" larger */
+    font-weight: bold; /* Make "Hello" bold */
+    color: #003366; /* Add color for a professional look */
+}
+
+/* Styling for "Nethmi Vaas" */
+.name-text {
+    font-weight: bold; /* Make "Nethmi Vaas" bold */
+    color: #003366; /* A different color to make it stand out */
+}
+
+/* Image Section */
 .image-section {
-    flex: 0.5;
+    width: 40%; /* Adjusted width */
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+     /* Center the image within the section */
 }
 
+/* Profile Image */
 .image-section img {
-    max-width: 100%;
+    max-width: 80%; /* Make the image size relative to its container */
     height: auto;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
+    border-radius: 110%;
+    box-shadow: 0 50px 50px rgba(7, 5, 105, 0.1);
 }
 
-.home-button {
+/* Button for Download CV */
+.download-button {
     display: inline-block;
-    background-color: #007bff;
+    background-color: #003366; /* Navy blue */
     color: white;
     padding: 15px 30px;
     font-size: 1.1em;
@@ -157,159 +156,512 @@ nav {
     cursor: pointer;
     text-transform: uppercase;
     transition: background-color 0.3s ease;
+    margin-top: 20px;
 }
 
-.home-button:hover {
-    background-color: #0056b3;
+.download-button:hover {
+    background-color: #002244; /* Slightly darker navy blue */
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home-container {
+        flex-direction: column; /* Stack items vertically on small screens */
+        padding: 10px;
+    }
+
+    .text-section {
+        width: 100%; /* Full width for smaller screens */
+        text-align: center;
+    }
+
+    .image-section {
+        width: 100%; /* Full width for smaller screens */
+        margin-top: 20px;
+    }
+
+    .image-section img {
+        max-width: 200px;
+    }
+
+    .text-section h1 {
+        font-size: 2em;
+    }
+
+    .text-section p {
+        font-size: 1.2em;
+    }
+}
+
+
+/* Container for the About section */
 .about-container {
-    padding: 40px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 1200px;
-    margin: 50px auto;
+    max-width: 800px;
+    margin: 0 auto; /* Center the content */
+    padding: 20px;
+    background-color: #ffffff; /* White background */
+    color: #333333; /* Dark gray text for readability */
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for card effect */
 }
 
-h1 {
-    text-align: center;
-    color: #333;
+/* Headings styling */
+.about-container h1 {
+    font-size: 36px;
     margin-bottom: 20px;
+    border-bottom: 2px solid #003366; /* Underline with navy blue */
+    padding-bottom: 10px;
+    color: #003366; /* Navy blue text */
 }
 
-p {
-    font-size: 16px;
-    color: #666;
+.about-container h2 {
+    font-size: 28px;
+    color: #002244; /* Darker navy blue */
+    margin-top: 30px;
     margin-bottom: 15px;
 }
 
-h2 {
-    color: #007bff;
-    margin-top: 20px;
-    margin-bottom: 10px;
+/* Paragraphs styling */
+.about-container p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #555555; /* Medium gray for text */
 }
 
-ul {
-    list-style: disc;
-    padding-left: 20px;
+/* Skills container styling */
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
-ul li {
-    margin-bottom: 10px;
+/* Skills sections styling */
+.skills-section {
+    flex: 1;
+    margin-right: 20px;
 }
-.projects-container {
-    padding: 40px;
-    background-color: #ffffff;
+
+.skills-section:last-child {
+    margin-right: 0;
+}
+
+/* Skills lists styling */
+.skills-list {
+    list-style-type: none; /* Remove default bullet points */
+    padding-left: 0;
+}
+
+.skills-list li {
+    background-color: #f0f0f0; /* Light gray background for list items */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-left: 4px solid #003366; /* Navy blue left border */
+    border-radius: 8px;
+    color: #333333; /* Dark gray text */
+}
+
+/* Highlight section titles */
+.about-container p, .skills-list li {
+    color: #555555; /* Medium gray for better readability */
+}
+
+/* Skills and volunteering section headings */
+.about-container p:nth-child(7),
+.about-container p:nth-child(9) {
+    font-weight: bold;
+    color: #002244; /* Darker navy blue */
+}
+
+/* Emphasize education and skills with bold and italic */
+.about-container p strong {
+    font-weight: bold;
+    color: #003366; /* Navy blue for strong emphasis */
+}
+
+.about-container p em {
+    font-style: italic;
+    color: #666666; /* Slightly lighter gray for italic emphasis */
+}
+
+/* Italicize and enlarge skills section titles */
+.skills-section p {
+    font-style: italic;
+    font-size: 22px; /* Slightly larger font size */
+    color: #002244; /* Darker navy blue for contrast */
+    margin-bottom: 15px;
+}
+
+/* Add hover effects to list items */
+.skills-list li:hover {
+    background-color: #e0e0e0; /* Slightly darker gray on hover */
+}
+
+/* Highlight Education and Volunteering sections */
+.education-section, .volunteering-section {
+    background-color: #f8f8f8; /* Light gray background for highlight */
+    border-left: 5px solid #003366; /* Navy blue left border for emphasis */
+    padding: 15px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 1200px;
-    margin: 50px auto;
+    margin-bottom: 20px;
 }
 
-h1 {
-    text-align: center;
+/* Add some spacing between elements */
+.about-container p,
+.about-container h2,
+.skills-container {
+    margin-top: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .about-container {
+        padding: 15px;
+    }
+
+    .about-container h1 {
+        font-size: 28px;
+    }
+
+    .about-container h2 {
+        font-size: 24px;
+    }
+
+    .about-container p {
+        font-size: 16px;
+    }
+
+    .skills-container {
+        flex-direction: column;
+    }
+
+    .skills-section {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+/* Container for the projects section */
+.projects-container {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #fff;
     color: #333;
-    margin-bottom: 30px;
 }
 
-ul {
+/* Header for the projects section */
+.projects-container h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #003366; /* Underline with navy blue */
+    padding-bottom: 10px;
+    color: #003366; 
+}
+
+/* Styling for each project item */
+.project-item {
+    background: #F8F8F8;
+    border-left: 4px solid #003366; /* Navy blue accent */
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Header for each project */
+.project-item h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #003366; /* Navy blue */
+}
+
+/* Paragraph styling within project items */
+.project-item p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Adding list styles for project technologies */
+.project-item p:last-child {
+    font-weight: bold;
+}
+
+/* Adding padding to the list of projects */
+.projects-container ul {
     list-style: none;
     padding: 0;
 }
 
-.project-item {
-    margin-bottom: 20px;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+/* Media query for responsive design */
+@media (max-width: 768px) {
+    .projects-container h1 {
+        font-size: 2em;
+    }
+
+    .project-item h2 {
+        font-size: 1.6em;
+    }
+
+    .project-item p {
+        font-size: 1em;
+    }
 }
 
-.project-item h2 {
-    color: #007bff;
-    margin-bottom: 10px;
-}
-
-.project-item p {
-    font-size: 16px;
-    color: #666;
-    line-height: 1.6;
-}
+/* Contact Styling */
+/* Contact Page Styling */
 .contact-container {
-    padding: 40px;
-    background-color: #ffffff;
+    background-color: white; /* White background */
+    color: #003366; /* Navy blue text */
+    padding: 50px 20px;
+    text-align: center;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 1200px;
-    margin: 50px auto;
+    max-width: 800px;
+    margin: 50px auto; /* Center the container on the page */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow for a clean look */
 }
 
-h1 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 30px;
+.contact-heading 
+    {
+        font-size: 36px;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #003366; /* Underline with navy blue */
+        padding-bottom: 10px;
+        color: #003366; 
+    
 }
 
 .contact-details {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 20px;
 }
 
 .contact-item {
     display: flex;
     align-items: center;
+    gap: 15px;
+    font-size: 1.4em;
+}
+
+.contact-icon {
+    font-size: 1.8em;
+    color: #003366; /* Navy blue icons */
+}
+
+.contact-text, .contact-link {
+    color: #003366; /* Navy blue text */
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    transition: color 0.3s;
+}
+
+.contact-link:hover {
+    color: #19162e; /* Highlight color on hover for links */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 30px 10px;
+    }
+
+    .contact-heading {
+        font-size: 2.2em;
+    }
+
+    .contact-item {
+        font-size: 1.2em;
+    }
+
+    .contact-icon {
+        font-size: 1.6em;
+    }
+}
+.home-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f4f8; /* Light background color for the section */
+    animation: fadeIn 1s ease-in-out; /* Fade-in animation for the whole container */
+}
+
+.text-section {
+    max-width: 50%;
+}
+
+.image-section {
+    max-width: 45%;
+}
+
+/* Header Animation */
+h1 {
+    font-size: 48px;
+    color: #003366; /* Navy blue text */
     margin-bottom: 20px;
+    animation: slideInFromLeft 1s ease-out; /* Slide-in from left animation */
+}
+
+/* Intro Text Animation */
+.intro-text {
+    font-size: 24px;
+    color: #333333; /* Dark gray text */
+    animation: textFadeIn 1s ease-out; /* Text fade-in animation */
+}
+
+.hello-text {
+    font-weight: bold;
+    color: #002244; /* Darker navy blue */
+}
+
+.name-text {
+    font-weight: bold;
+    color: #003366; /* Navy blue */
+}
+
+/* Download Button Animation */
+.download-button {
     font-size: 18px;
-    color: #666;
+    padding: 10px 20px;
+    color: #ffffff;
+    background-color: #003366; /* Navy blue background */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effect */
+    animation: pulse 1.5s infinite; /* Pulse animation */
+}
+
+.download-button:hover {
+    background-color: #002244; /* Darker navy blue on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+/* Profile Image Animation */
+.profile-image {
+    width: 100%;
+    height: auto;
+    border-radius: 50%; /* Circular profile image */
+    animation: zoomIn 1.5s ease-out; /* Zoom-in animation */
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes textFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        background-color: #003366;
+    }
+    50% {
+        transform: scale(1.1);
+        background-color: #004080; /* Slightly lighter navy blue */
+    }
+    100% {
+        transform: scale(1);
+        background-color: #003366;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.profile-image {
+    width: 100%;
+    height: auto;
+    border-radius: 50%; /* Circular profile image */
+    animation: zoomIn 1.5s ease-out; /* Zoom-in animation */
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.3); /* Shadow border */
+}
+
+.contact-link {
+    font-size: 18px;
+    color: #003366; /* Navy blue text */
+    text-decoration: none; /* Remove underline from links */
+    transition: color 0.3s, transform 0.3s; /* Smooth transition for color and transform */
+    display: flex;
+    align-items: center;
+}
+
+.contact-link:hover {
+    color: #002244; /* Darker navy blue on hover */
+    transform: scale(1.1); /* Slightly scale up on hover */
 }
 
 .contact-icon {
     font-size: 24px;
-    margin-right: 10px;
-    color: #007bff;
+    color: #003366; /* Navy blue for icons */
+    margin-right: 8px;
+    transition: color 0.3s, transform 0.3s; /* Smooth transition for color and transform */
 }
 
-.contact-text {
-    font-size: 18px;
-}
-.resume-section {
-    padding: 40px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    margin: 50px auto;
-    text-align: center;
+.contact-icon:hover {
+    color: #002244; /* Darker navy blue on hover */
+    transform: rotate(20deg); /* Slightly rotate on hover */
 }
 
-h1 {
-    color: #333;
-    margin-bottom: 20px;
+/* Optional: Add animation when the component mounts */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-p {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 20px;
+.contact-item {
+    margin-bottom: 15px;
+    animation: fadeIn 1s ease-out; /* Fade-in animation for each contact item */
 }
 
-.download-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 15px 25px;
-    font-size: 16px;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease;
-}
-
-.download-button:hover {
-    background-color: #0056b3;
-}
-
-.download-button:active {
-    background-color: #004080;
+.profile-image {
+    width: 100%;
+    height: auto;
+    border-radius: 50%; /* Circular profile image */
+    animation: zoomIn 1.5s ease-out; /* Zoom-in animation */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Shadow border */
+    border: 5px solid #003366; /* Navy blue border with a 5px width */
 }

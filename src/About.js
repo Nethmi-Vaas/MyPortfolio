@@ -5,28 +5,76 @@ const About = () => {
     <div className="about-container">
       <h1>About Me</h1>
       <p>
-        Hello! I’m Jane Doe, a Full Stack Web Developer with a passion for building innovative and efficient web applications. With a background in both front-end and back-end development, I’m skilled in creating responsive, user-friendly interfaces and robust server-side solutions.
+        I am an enthusiastic IT undergraduate with strong communication skills and a dedication to punctuality. I thrive on exploring new
+        experiences and bring a focused approach to everything I do, ensuring that tasks are completed neatly and accurately. My
+        proactive attitude and attention to detail drive me to consistently deliver quality results. Skilled at using my technical knowledge
+        to work well in changing environments, always looking for ways to grow and learn.
       </p>
-      <h2>Skills</h2>
-      <ul>
-        <li>JavaScript (ES6+), React.js, Node.js</li>
-        <li>HTML5, CSS3, SASS</li>
-        <li>RESTful APIs, GraphQL</li>
-        <li>Database Management (MongoDB, SQL)</li>
-        <li>Version Control (Git, GitHub)</li>
-      </ul>
       <h2>Education</h2>
-      <p>
-        Bachelor of Science in Computer Science - XYZ University<br />
-        Graduated: 2020
-      </p>
-      <h2>Experience</h2>
-      <p>
-        - Web Developer Intern at ABC Corp (2021 - 2022)<br />
-        - Freelance Web Developer (2022 - Present)
-      </p>
+      <div className="education-section">
+        <p>
+          <strong>B.Sc. (Hons) in Computing and Information Systems</strong><br />
+          Sabaragamuwa University of Sri Lanka<br />
+          2022- Present
+        </p>
+        <p>
+          <strong>Aquinas Diploma in English Language and Literature</strong><br />
+          BCI Campus, Negombo<br />
+          2022 Jan - 2022 Oct
+        </p>
+        <p>
+          <strong>G.C.E Advanced Level</strong><br />
+          Dammissara National College, Naththandiya<br />
+          Common Stream<br />
+          2020
+        </p>
+      </div>
+      <h2>Skills</h2>
+      <div className="skills-container">
+        <div className="skills-section">
+          <p><strong>Technical Skills</strong></p>
+          <ul className="skills-list">
+            <li><b>Programming Languages</b><br />
+              HTML, CSS, JavaScript, PHP
+            </li>
+            <li><b>Frameworks and Libraries</b><br />
+              Flutter, ReactJs
+            </li>
+            <li><b>Databases</b><br />
+              MongoDB, Firestore
+            </li>
+            <li><b>Technologies and Tools</b><br />
+              Firebase, Git (Version controlling), Figma, Trello, PowerBI, Excel
+            </li>
+          </ul>
+        </div>
+        <div className="skills-section">
+          <p><strong>Soft Skills</strong></p>
+          <ul className="skills-list">
+            <li>Decision making</li>
+            <li>Teamwork</li>
+            <li>Problem solving</li>
+            <li>Adaptability</li>
+            <li>Communication</li>
+          </ul>
+        </div>
+      </div>
+      <h2>Volunteering</h2>
+      <div className="volunteering-section">
+        <p>
+          <strong>Society of Computer Science</strong><br />
+          Active member<br />
+          2022 - present
+        </p>
+        <p>
+          <strong>IEEE WIE Student Branch of SUSL</strong><br />
+          Volunteer<br />
+          2024
+        </p>
+      </div>
     </div>
   );
 };
+
 
 export default About;

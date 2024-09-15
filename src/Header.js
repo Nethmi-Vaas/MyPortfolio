@@ -12,7 +12,7 @@ function Header() {
           <li><Link to="/about">About</Link></li> {/* Use Link for internal navigation */}
           <li><Link to="/projects">Projects</Link></li>
 <li><a href="/contact">Contact</a></li> {/* External link can use a */}
-          <li><Link to="/resume">Resume</Link></li>
+         
         </ul>
       </nav>
     </header>
